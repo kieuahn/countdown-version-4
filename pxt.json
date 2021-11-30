@@ -1,5 +1,5 @@
 {
-    "name": "Countdown version 4",
+    "name": "Microbit Countdown timer ",
     "description": "",
     "dependencies": {
         "core": "*",

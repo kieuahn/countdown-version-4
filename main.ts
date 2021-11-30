@@ -35,15 +35,18 @@ input.onButtonPressed(Button.B, function () {
 input.onGesture(Gesture.Shake, function () {
     while (set_Timerseconds > 0) {
         set_Timerseconds += 0 - 1
+        music.playTone(262, music.beat(BeatFraction.Quarter))
         if (set_Timerseconds == 0) {
             set_Timerminutes += 0 - 1
+            music.playTone(262, music.beat(BeatFraction.Quarter))
             set_Timerseconds = 59
             if (set_Timerminutes == 0) {
                 set_Timerhours += 0 - 1
+                music.playTone(262, music.beat(BeatFraction.Quarter))
                 set_Timerminutes = 59
-                basic.showString("" + set_Timerhours + ":" + set_Timerminutes + ":" + set_Timerseconds)
+                basic.showString("" + set_Timerhours + ":" + ("" + set_Timerminutes) + ":" + ("" + set_Timerseconds))
             }
-            basic.showString("" + set_Timerminutes + ":" + set_Timerseconds)
+            basic.showString("" + set_Timerminutes + ":" + ("" + set_Timerseconds))
         }
         basic.showNumber(set_Timerseconds)
         basic.pause(100)
@@ -54,6 +57,3 @@ let set_Timerminutes = 0
 let set_Timerhours = 0
 set_Timerhours = 0
 set_Timerminutes = 0
-basic.forever(function () {
-	
-})
